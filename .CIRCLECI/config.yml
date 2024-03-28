@@ -30,7 +30,6 @@ jobs:
          command: |
            cd plugins/client-plugin && rsync -avz --delete -e 'ssh -p 44818 -o StrictHostKeyChecking=no' --exclude '.git' --exclude '.circleci' ./ ${KINSTA_SSH_USER}@${KINSTA_SSH_HOST}:${KINSTA_DIR}/plugins/client-plugin
 
-
 workflows:
  version: 2
  build_and_deploy:
